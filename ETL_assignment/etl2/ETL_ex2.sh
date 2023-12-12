@@ -6,12 +6,13 @@ if [ ! "$#" -eq 1 ]; then
   fi
 checking_date_format() {
   regex_pattern="^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
-  if [[ ! $1 =~ $regex_pattern ]]; then
+  if [[  ! $1 =~ $regex_pattern ]]; then
     echo "Usage: DATE argument in the wrong format, it must be YYYY-DD-MM"
     exit 1
   fi
 }
 
+checking_date_format "$1"
 
 # Condition Checking
 function condition_checking {
