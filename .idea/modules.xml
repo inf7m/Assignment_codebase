@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Mobileum.iml" filepath="$PROJECT_DIR$/.idea/Mobileum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../me_llamo_seb/.idea/Assignment_codebase.iml" filepath="$PROJECT_DIR$/../me_llamo_seb/.idea/Assignment_codebase.iml" />
     </modules>
   </component>
 </project>
