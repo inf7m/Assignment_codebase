@@ -1,0 +1,6 @@
+## Structure
+### Logs_Ops_class will be using for storing `static method` and `class` 
+
+### createLogs.py will create data into logs/ directory
+
+### operations will the be the place for testing, I have create sample code - just uncomment to use!
