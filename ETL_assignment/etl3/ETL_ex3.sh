@@ -21,12 +21,21 @@ checking_date_format "$1"
 oldest_file=$(ls -lt --time=creation | grep "user.application" | awk 'NR==1 {print $NF}')
 # Identify current date user_application file and prevent the program hanging if not found
 provided_date_file="user.application.$1.csv"
-if [ -f "$current_date_provided_file" ]; then
-  echo "Dont have any files with the provided date "
+echo $provided_date_file
+
+if [ ! -f "$provided_date_file" ]; then
+  echo "Don't have any files with the provided date"
   exit 1
-  fi
-# Identify latest user_application file
+fi
+
+# Identify the latest user_application file
 latest_date_provided_file=$(ls -lt --time=creation | grep "user.application" | awk 'END {print $NF}')
+echo $latest_date_provided_file
+
+if [[ $provided_date_file == $latest_date_provided_file ]]; then
+  echo "provided_date_file and latest_date_provided_file can not be equal"
+  exit 1
+fi
 # Extract to get date only - using for UNIX Timestamp Convention
 extract_date_oldest_date="${oldest_file:17:10}"
 extract_date_provided_date="${provided_date_file:17:10}"
